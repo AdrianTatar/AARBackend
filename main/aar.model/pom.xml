@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.rso.aar</groupId>
+    <artifactId>main</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>aar.model</artifactId>
+  <packaging>jar</packaging>
+  
+   <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-tools</artifactId>
+            <version>${hibernate-tools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.beanlib</groupId>
+            <artifactId>beanlib</artifactId>
+            <version>${beanlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>aar.common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    
+     <build>
+     <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0-alpha-2</version>
+                <executions>
+                    <execution>
+                        <id>read project properties</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>../aar.common/src/main/resources/${zone}/database.properties</file>
+                            </files>
+                            <properties>
+                            </properties>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>  
+       </build>
+</project>
