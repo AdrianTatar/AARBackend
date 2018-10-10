@@ -9,5 +9,7 @@ public interface FixedPriceProjectService {
 	public List<FixedPriceProject> findAllFixedPriceProjects();
 
 	public FixedPriceProject saveFixedPriceProject(FixedPriceProject fixedPriceProject);
+	
+	public FixedPriceProject updateFixedPriceProject(FixedPriceProject fixedPriceProject);
 
 }

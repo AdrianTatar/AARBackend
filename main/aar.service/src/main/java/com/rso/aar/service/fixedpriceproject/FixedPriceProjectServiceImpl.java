@@ -29,5 +29,11 @@ public class FixedPriceProjectServiceImpl implements FixedPriceProjectService {
 		LOGGER.debug("call saveFixedPriceProject");
 		return fixedPriceProjectDao.saveFixedPriceProject(fixedPriceProject);
 	}
+	
+	@Override
+	public FixedPriceProject updateFixedPriceProject(FixedPriceProject fixedPriceProject) {
+		LOGGER.debug("call updateFixedPriceProject");
+		return fixedPriceProjectDao.saveFixedPriceProject(fixedPriceProject);
+	}
 
 }

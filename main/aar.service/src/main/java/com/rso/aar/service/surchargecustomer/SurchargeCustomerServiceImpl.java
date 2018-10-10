@@ -20,8 +20,7 @@ public class SurchargeCustomerServiceImpl implements SurchargeCustomerService {
 	 
 	@Override
 	public List<SurchargeCustomer> findAllSurcheargeCustomers(){
-		LOGGER.debug("call findAllSurcheargeCustomers");
-		LOGGER.debug("test");
+		LOGGER.debug("call findAllSurcheargeCustomers");	
 		return surchargeCustomerDao.findAllSurchargeCustomers();
 	}
 

@@ -38,12 +38,19 @@ public class TestPopulateDB {
 //		bean.setCustomernumber("80020");
 //		bean.setPrice(new BigDecimal(477830));
 		
+//		SurchargeCustomer bean= new SurchargeCustomer();
+//		bean.setDebitornumber("80020");
+//		bean.setDebitorname("Raiffeisen e-force");
+//		bean.setType("Fremdbanken");
+//		bean.setCustomernumber("");
+//		bean.setCustomername("ERSTE Bank");
+		
 		SurchargeCustomer bean= new SurchargeCustomer();
-		bean.setDebitornumber("80020");
-		bean.setDebitorname("Raiffeisen e-force");
+		bean.setDebitornumber("19690");
+		bean.setDebitorname("Vakif");
 		bean.setType("Fremdbanken");
-		bean.setCustomernumber("");
-		bean.setCustomername("ERSTE Bank");
+		bean.setCustomernumber("19690");
+		bean.setCustomername("Vakif");
 		
 		session.save(bean);
 		
