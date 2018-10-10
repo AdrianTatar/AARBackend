@@ -6,13 +6,14 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public abstract class HibernateDao<T, I extends Serializable> {
-
+	
     private Class<T> persistentClass;
 
     @Autowired

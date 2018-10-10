@@ -9,8 +9,9 @@ public class CORSResponseFilter implements ContainerResponseFilter {
 	@Override
 	public ContainerResponse filter(ContainerRequest request, ContainerResponse response) {
 		response.getHttpHeaders().add("Access-Control-Allow-Origin", "*");
-		response.getHttpHeaders().add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, HEAD");
-
+		response.getHttpHeaders().add("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, HEAD");
+		response.getHttpHeaders().add("Access-Control-Allow-Headers","Content-Type, Access-Control-Allow-Headers");
+		
 		return response;
 	}
 
